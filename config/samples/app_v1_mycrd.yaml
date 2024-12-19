@@ -1,0 +1,9 @@
+apiVersion: app.example.com/v1
+kind: MyCrd
+metadata:
+  labels:
+    app.kubernetes.io/name: my-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: mycrd-sample
+spec:
+  # TODO(user): Add fields here

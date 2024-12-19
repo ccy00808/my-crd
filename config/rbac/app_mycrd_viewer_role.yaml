@@ -1,0 +1,23 @@
+# permissions for end users to view mycrds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: my-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: app-mycrd-viewer-role
+rules:
+- apiGroups:
+  - app.example.com
+  resources:
+  - mycrds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - app.example.com
+  resources:
+  - mycrds/status
+  verbs:
+  - get
